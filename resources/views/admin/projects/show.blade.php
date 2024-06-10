@@ -11,6 +11,17 @@
     <div>
         <strong>Tipo</strong>: {{ $project->type ? $project->type->name : 'No type' }}
     </div>
+    <div>
+        <strong>Technologies</strong>:
+        @if (count($project->technologies) > 0)
+             @foreach ($project->technologies as $technology)
+                 {{ $technology->name }}
+             @endforeach
+        @else
+            No technology assigned yet
+        @endif
+    </div>
+
     <div class="my-1">
         <strong>Nome cliente:</strong> {{ $project->client_name }}
     </div>

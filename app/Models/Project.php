@@ -15,7 +15,7 @@ class Project extends Model
         'client_name',
         'summary',
         'cover_image',
-        'type_id'
+        'type_id',
     ];
 
     public function type(){
